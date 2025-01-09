@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Portfolio{% endblock %}
+
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-light my-6 mt-0" id="home">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                <h3 class="text-primary mb-3">I'm</h3>
+                <h1 class="display-3 mb-3">Student Name</h1>
+                <h2 class="typed-text-output d-inline"></h2>
+                <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Back-End Developer</div>
+                <div class="d-flex align-items-center pt-5">
+                    <a href="#" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="{{ url_for('static', filename='img/profile.png') }}" alt="Profile Picture">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- About Start -->
+<div class="container-xxl py-6" id="about">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-4">Hi there and welcome to my My Web Application development portfolio.</h1>
+                <p>This blog is designed to showcase the best work I’ve done, the stories I’ve written and am passionate about telling, and the skills and experience I can bring to a new position. 
+                    <p>It is always up to date repository of my successes and experiences in creating web applications. Therefore, using this portfolio, I hope to demonstrate some of the skills, competencies and expertise in designing of user friendly, engaging and secure web application solutions. 
+                    </p>
+                    <p>This portfolio belongs to one of my classes CMT120 Web Application Development that I am undertaking at Cardiff University.
+                    Some of the other jobs I have done are the development of user account dynamic site, implementing security measures, and making web application highly usable. I also have a special sensitivity towards the design and usability of applications that are meaningful to the audience.
+                    </p>
+                    <h2 class="display-4 mb-4">My Skills</h2>
+                <ul>
+                    <li>Front-End Development:</li>
+                    <p>HTML5, CSS3, JavaScript, React.js, Tailwind CSS </p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-primary" style="width: 95%">Frontend - 95%</div>
+                    </div>
+                    <li>Back-End Development:</li>
+                    <p>Node.js and Express.js, MongoDB, PostgreSQL </p>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-success" style="width: 65%">Backend - 65%</div>
+                    </div>
+                    <li>User Authentication and Authorization using Flask:</li>
+                    <p>Secure user registration, login, and session, Integrating JWT (JSON Web Tokens).</p>
+                    <li>Version Control using Git and Deployment into OpenShift</li>
+                    <div class="progress mb-4">
+                        <div class="progress-bar bg-danger" style="width: 90%">Version Control - 90%</div>
+                    </div>
+                </ul>
+                <a class="btn btn-primary py-3 px-5 mt-3" href="#">Read More</a>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid rounded" src="{{ url_for('static', filename='img/about-1.jpg') }}" alt="About Image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Skills Start -->
+<div class="container-xxl py-6 pb-5" id="skill">
+    <div class="container">
+        <h1 class="display-5 mb-5">Experience</h1>
+        <div class="row">
+          
+            <div class="col-md-6">
+              
+                <ul>
+                    <li>Frontend Web developer at Microsoft (2020 - 2022)</li>
+                </br>
+                    <li>UI Designer at Apex Software Inc (2022 - 2024)</li>
+                </br>
+                    <li>Product Designer at Unique Software Inc (2023 - 2025)</li>
+                </br>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Skills End -->
+
+
+<!-- Service Start -->
+<div class="container-fluid bg-light my-5 py-6" id="service">
+    <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-0">My Services</h1>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a class="btn btn-primary py-3 px-5" href="#">Hire Me</a>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                    <div class="bg-icon flex-shrink-0 mb-3">
+                        <i class="fa fa-crop-alt fa-2x text-dark"></i>
+                    </div>
+                    <div class="ms-sm-4">
+                        <h4 class="mb-3">Creative Design</h4>
+                        <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                        <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                    <div class="bg-icon flex-shrink-0 mb-3">
+                        <i class="fa fa-code-branch fa-2x text-dark"></i>
+                    </div>
+                    <div class="ms-sm-4">
+                        <h4 class="mb-3">Graphic Design</h4>
+                        <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                        <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                    <div class="bg-icon flex-shrink-0 mb-3">
+                        <i class="fa fa-code fa-2x text-dark"></i>
+                    </div>
+                    <div class="ms-sm-4">
+                        <h4 class="mb-3">Web Design</h4>
+                        <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                        <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                    <div class="bg-icon flex-shrink-0 mb-3">
+                        <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                    </div>
+                    <div class="ms-sm-4">
+                        <h4 class="mb-3">Backend Design</h4>
+                        <h6 class="mb-3">Start from <span class="text-primary">$199</span></h6>
+                        <span>Stet lorem dolor diam amet vero eos. No stet est diam amet diam ipsum. Clita dolor duo clita sit sed sit dolor eos.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+<!-- Projects Start -->
+<div class="container-l py-6 pt-5" id="project">
+    <div class="container">
+        <h1 class="display-5 mb-5">My Web Application Projects</h1>
+        <div class="row g-2">
+            <div class="col-lg-6 col-md-6">
+                <img class="img-fluid rounded" src="{{ url_for('static', filename='img/project-1.jpg') }}" alt="Project 1">
+                <h4 class="mt-2">1. Personal Portfolio Website</h4>
+                <p>On this website, there is my path as the web developer that consists of the development report.</p>
+                <p>It includes user interaction in a contact page where visitors can use to contact me personally. </p>
+                <p>  Dynamic content was created with React.js, while I utilized Tailwind CSS to ensure that the page was responsive.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Node.js, Express.js, React.js, MongoDB and Tailwind CSS.</p>
+                <p><strong>Challenges:</strong> Maintaining good user experience while navigating through the same site using a PC as compared to a mobile phone.</p>
+                <p><strong>Solution</strong>:: To incorporate responsive web element designs, applied media queries and the flexbox method, and designed for mobile-first use.
+            </p>
+            
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <img class="img-fluid rounded" src="{{ url_for('static', filename='img/project-2.jpg') }}" alt="Project 2">
+                <h4 class="mt-2">2. Online Bookstore</h4>
+                <p>I created an online store that would allow the users to buy books from the e-commerce website. It has integration of user’s account feature, shopping cart feature and payment feature in this application.</p>
+            <p><strong>Technologies Used:</strong> React, Node.js, Express, Monogo DB, Stripe API.</p>
+            <p><strong>Challenges:</strong> To support secure payments and user’s data.</p>
+        <p><strong>Solution</strong>: Stripe API for payment integration and JWT for handling session.</p>    
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Projects End -->
+
+{% endblock %}

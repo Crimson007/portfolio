@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<!-- Dashboard Content -->
+<div class="container-fluid pt-4 px-4">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="bg-light rounded p-4 mb-4">
+                <h4 class="mb-3">Dashboard</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('dashboard') }}">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('profile') }}">
+                            <i class="bi bi-person-circle"></i> Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-cogs"></i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="bg-light rounded p-4">
+                <h3 class="mb-4">Welcome, {{ current_user.username }}!</h3>
+                <div class="row">
+                    <!-- Profile Section -->
+                    <div class="col-md-12 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Your Profile</h5>
+                                <p class="card-text"><strong>Username:</strong> {{ user.username }}</p>
+                                <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+                                <p class="card-text"><strong>Account Created On:</strong> {{ user.created_at }}</p>
+                                <a href="#" class="btn btn-primary">Edit Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Card -->
+                    <div class="col-md-6 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Settings</h5>
+                                <p class="card-text">Manage your account settings.</p>
+                                <a href="#" class="btn btn-warning">Go to Settings</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projects Card -->
+                    <div class="col-md-6 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Your Projects</h5>
+                                <p class="card-text">Manage your ongoing projects.</p>
+                                <a href="#" class="btn btn-info">View Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Notifications Card -->
+                    <div class="col-md-4 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Notifications</h5>
+                                <p class="card-text">View recent notifications.</p>
+                                <a href="#" class="btn btn-success">View Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats Card -->
+                    <div class="col-md-4 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Statistics</h5>
+                                <p class="card-text">View your account statistics.</p>
+                                <a href="#" class="btn btn-secondary">View Stats</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Info Card -->
+                    <div class="col-md-4 col-sm-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">More Information</h5>
+                                <p class="card-text">More details about your account.</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
